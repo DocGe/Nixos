@@ -18,7 +18,15 @@
           gaps_out = 10;
           border_size = 2;
         };
+	
+	"env" = [
+	
+	  "ELECTRON_OZONE_PLATFORM_HINT,auto"
+	  "HYPRCURSOR_THEME,rose-pine-hyprcursor"
+          "HYPRCURSOR_SIZE,24"
+	];
 
+	
         "$browser" = "firefox";
 	"$terminal" = "kitty";
 	"$filemanager" = "nemo";
@@ -27,8 +35,7 @@
         "waybar"
         "hyprpaper"
         ];
-        # Electron_app (VSCode, Obsidian)
-        "env" = "ELECTRON_OZONE_PLATFORM_HINT,auto";
+        
         
         dwindle = {
           pseudotile = true;

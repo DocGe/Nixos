@@ -114,6 +114,7 @@ in
   environment.systemPackages = with pkgs; [
    brightnessctl
    nemo
+   rose-pine-hyprcursor
   ];
 
   # Fonts
