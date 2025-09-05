@@ -8,7 +8,7 @@
     #  force = true;
     #  flavor = "macchiato";  
     #};
-    #hyprland.enable = true;
+    rofi.enable = true;
   };
 
 

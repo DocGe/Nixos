@@ -12,7 +12,8 @@
     shellAliases = {
       nrs = "sudo nixos-rebuild switch";
     };
-   };
+    
+  };
 
 
 }

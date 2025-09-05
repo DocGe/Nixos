@@ -5,6 +5,7 @@
     wayland.windowManager.hyprland = {
       enable = true;
       xwayland.enable = true;
+      #systemd.enable = false;
       settings = {
         decoration = {
           rounding = 10;
@@ -30,7 +31,8 @@
         "$browser" = "firefox";
 	"$terminal" = "kitty";
 	"$filemanager" = "nemo";
-   
+	"$menu" = "rofi -show drun";  
+
         exec-once = [
         "waybar"
         "hyprpaper"
@@ -61,6 +63,9 @@
           "$mod, down, movefocus, d"
           "$mod, left, movefocus, l"
           "$mod, right, movefocus, r"
+	  "$mod, A, exec, $menu"
+          "$mod, O, exec, obsidian"
+	  "$mod, W, exec, /etc/nixos/modules/wallp.sh"
         ];
 	bindm = [
 	  "$mod, mouse:272, movewindow"  

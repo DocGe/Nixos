@@ -74,7 +74,7 @@ in
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "user";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
   };
   
   home-manager.users.user = { pkgs, ... }:{
@@ -90,16 +90,18 @@ in
       ./modules/git.nix
       ("${catppuccin}/modules/home-manager")
       ./modules/catppuccin.nix
-      #./modules/qt.nix
-   ];
-    
+      #./modules/rofi.nix
+    ];
+
     home.stateVersion = "25.05";
     home.packages = [];
     gtk.enable = true;
     services.playerctld.enable = true;
   };
  
+  #programs.uwsm.enable = true;
   programs.hyprland.enable = true;
+  #programs.hyprland.withUWSM = true;
   programs.zsh = {
     enable = true;
     #promptInit = ''
@@ -112,14 +114,20 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-   brightnessctl
-   nemo
-   rose-pine-hyprcursor
+    brightnessctl
+    nemo
+    rose-pine-hyprcursor
+    rofi-wayland
+    obsidian
   ];
 
   # Fonts
   fonts.packages = with pkgs; [ nerd-fonts.jetbrains-mono ];
   
+  # Virtualisation
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
   # Audio
   # services.pipewire = {
     # enable = true;

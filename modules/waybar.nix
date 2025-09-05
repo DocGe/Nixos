@@ -225,6 +225,7 @@
     #backlight {
       background: #1e1e2e;
       padding: 0px 5px;
+      padding-left: 2px;
       margin: 3px 0px;
       margin-top: 5px;
     }
@@ -238,7 +239,7 @@
       margin-top:5px;
       margin-right: 10px;
       padding: 0px 10px;
-      padding-right: 5px;
+      padding-right: 2px;
     }
 
 
@@ -276,12 +277,14 @@
       margin-top: 5px;
       margin-bottom: 3px;
       padding-left: 5px;
+      padding-right: 5px;
     }
 
     #window {
       border-radius: 0px 10px 10px 0px;
       margin-right: 60px;
       margin-left: 0px;
+      padding-left: 0px;
     }
 
     #clock {
