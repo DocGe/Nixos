@@ -96,6 +96,7 @@ in
     home.stateVersion = "25.05";
     home.packages = [];
     gtk.enable = true;
+    services.playerctld.enable = true;
   };
  
   programs.hyprland.enable = true;
@@ -111,15 +112,22 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-  #git
-  nemo
+   brightnessctl
+   nemo
   ];
 
   # Fonts
   fonts.packages = with pkgs; [ nerd-fonts.jetbrains-mono ];
-
+  
+  # Audio
+  # services.pipewire = {
+    # enable = true;
+    #audio.enable = true;
+    #pulse.enable = true;
+    #alsa.enable = true;
+    #jack.enable = true;
+  #};
+  
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
