@@ -27,7 +27,7 @@ in
     device = "nodev";
     theme = pkgs.catppuccin-grub;
   };
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.canTouchEfiVariables = false;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -37,7 +37,10 @@ in
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    enable = true;
+    wifi.backend = "iwd";
+  };
 
   # Set your time zone.
   time.timeZone = "Europe/Paris";
@@ -95,10 +98,31 @@ in
 
     home.stateVersion = "25.05";
     home.packages = [];
-    gtk.enable = true;
+    qt = {
+      enable = true;
+      platformTheme.name = "kvantum";
+      style.name = "kvantum";
+    };
+    gtk = {
+      enable = true;
+      theme = {
+	name = "palenight";
+	package = pkgs.palenight-theme;
+      };
+      gtk3.extraConfig = {
+        Settings = ''
+	  gtk-application-prefer-dark-theme = 1
+	'';
+      };
+      gtk4.extraConfig = {
+        Settings = ''
+          gtk-application-prefer-dark-theme = 1
+        '';
+      };
+    };
     services.playerctld.enable = true;
   };
- 
+  #programs.nm-applet.enable = true; 
   #programs.uwsm.enable = true;
   programs.hyprland.enable = true;
   #programs.hyprland.withUWSM = true;
@@ -119,6 +143,7 @@ in
     rose-pine-hyprcursor
     rofi-wayland
     obsidian
+    dunst
   ];
 
   # Fonts

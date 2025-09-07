@@ -8,7 +8,7 @@
     #  force = true;
     #  flavor = "macchiato";  
     #};
-    rofi.enable = true;
+    #rofi.enable = true;
   };
 
 
