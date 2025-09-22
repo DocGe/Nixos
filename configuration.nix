@@ -128,7 +128,7 @@ in
     protonvpn-gui
     grimblast
     loupe
-    #efibootmgr
+    efibootmgr
   ];
 
   # NviDia and Gaming
