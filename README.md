@@ -10,6 +10,17 @@ reboot
 ```
 
 # GitHub
+```
+cd /etc/nixos
+git init
 
+\# La première fois
+git config user.name 'username'
+git config user.email 'mail'
 
+git commit -m "message"
+
+git remote add master https://USER:TOKEN@github.com/USER/REPO.git
+
+git push master master
 
