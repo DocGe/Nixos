@@ -8,7 +8,7 @@
     profiles.default.extensions = with pkgs.vscode-extensions; [
       #vscodevim.vim
       #yzhang.markdown-all-in-one
-      llvm-vs-code-extensions.vscode-clangd
+      #llvm-vs-code-extensions.vscode-clangd
     ];
   };
 }

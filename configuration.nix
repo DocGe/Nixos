@@ -23,16 +23,7 @@ in
     theme = pkgs.catppuccin-grub;
   };
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.initrd.kernelModules = [
-    "vfio_pci"
-    "vfio"
-    "vfio_iommu_type1"
-  ];
-  boot.extraModprobeConfig = ''
-    softdep nvidia pre: vfio-pci 
-    options vfio-pci ids=10de:2820,10de:22bd
-  '';
-  #boot.kernelParams = [ "amd_iommu=on" ]
+  
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -123,18 +114,21 @@ in
     obsidian
     dunst
     haruna
-    virtiofsd
     wget
     protonvpn-gui
     grimblast
     loupe
-    efibootmgr
+    #efibootmgr
+    libreoffice-still
+    hunspell
+    hunspellDicts.fr-moderne
+    lshw
   ];
 
-  # NviDia and Gaming
+  # Nvidia
   hardware.graphics.enable = true;
   hardware.nvidia.open = true;
-  services.xserver.videoDrivers = ["nvidia" "modesetting"];
+  services.xserver.videoDrivers = ["nvidia" "amdgpu"];
   hardware.nvidia = {
     modesetting.enable = true;
     prime = {

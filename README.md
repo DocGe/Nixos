@@ -24,3 +24,10 @@ git remote add master https://USER:TOKEN@github.com/USER/REPO.git
 
 git push master master
 
+# Audio
+- Par défault utilise l'audio intégrée et non la sortie de l'écran/speakers
+```
+wpctl status
+wpctl set-default <Num du Sink>
+```
+

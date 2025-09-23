@@ -158,8 +158,9 @@
     };
     "custom/power" = {
         format = " ";
-        on-click = "exec shutdown -h now";
-        on-click-right = "exec sudo nixos-channel --update";
+        on-click-right = "exec kitty --hold sudo nix-channel --update";
+        on-click = "exec kitty --hold sudo nixos-rebuild switch";
+        on-click-middle = "exec shutdown -h now";
     };
 
     }];
