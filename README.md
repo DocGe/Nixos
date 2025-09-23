@@ -23,6 +23,7 @@ git commit -m "message"
 git remote add master https://USER:TOKEN@github.com/USER/REPO.git
 
 git push master master
+```
 
 # Audio
 - Par défault utilise l'audio intégrée et non la sortie de l'écran/speakers
