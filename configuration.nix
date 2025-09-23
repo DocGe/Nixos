@@ -97,7 +97,6 @@ in
     services.playerctld.enable = true;
   };
   
-  
   programs.hyprland.enable = true;
   programs.zsh.enable = true;  
 
@@ -107,22 +106,23 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    brightnessctl
-    nemo
-    rose-pine-hyprcursor
-    rofi-wayland
-    obsidian
-    dunst
-    haruna
-    wget
-    protonvpn-gui
-    grimblast
-    loupe
-    #efibootmgr
+    brightnessctl        # Controle luminosité
+    nemo	         # Explorateur
+    rose-pine-hyprcursor # Curseur
+    rofi-wayland	 # Rofi
+    obsidian		 # Obsidian
+    dunst		 # Notifications
+    haruna		 # Lecteur audio/video
+    protonvpn-gui        # Proton VPN
+    grimblast		 # Capture d'écran
+    loupe		 # Images viewer
+    anki		 # Anki
+    #efibootmgr          # Gestion des entrées du boot
+
+    # Libre office et correcteur orthographe
     libreoffice-still
     hunspell
     hunspellDicts.fr-moderne
-    lshw
   ];
 
   # Nvidia

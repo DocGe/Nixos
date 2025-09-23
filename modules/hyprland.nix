@@ -35,7 +35,8 @@
 
         exec-once = [
         "waybar"
-	"/etc/nixos/modules/wallp.sh"
+	"hyprpaper"
+	#"/etc/nixos/modules/wallp.sh"
         ];
         
         
