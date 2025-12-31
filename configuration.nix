@@ -25,6 +25,11 @@ in
   boot.loader.efi.canTouchEfiVariables = true;
   
   networking.hostName = "nixos"; # Define your hostname.
+  networking.firewall.enable = false;
+  #networking.dhcpcd.enable = true;
+  #networking.dhcpcd.extraConfig = ''
+  #'';
+
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Enable networking via networkmanager
@@ -62,6 +67,7 @@ in
   # Automounting drives
   services.udisks2.enable = true;
   services.gvfs.enable = true;
+  
   
   # Configure console keymap
   console.keyMap = "fr";
@@ -118,7 +124,7 @@ in
     loupe		 # Images viewer
     anki		 # Anki
     #efibootmgr          # Gestion des entrées du boot
-
+    qbittorrent
     # Libre office et correcteur orthographe
     libreoffice-still
     hunspell
@@ -139,7 +145,10 @@ in
       amdgpuBusId = "PCI:5:0:0";
       nvidiaBusId = "PCI:1:0:0";
     };
-  };  
+  };
+ 
+  services.logind.lidSwitch = "ignore";
+  
   
   # Fonts
   fonts.packages = with pkgs; [ nerd-fonts.jetbrains-mono ];

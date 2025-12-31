@@ -31,4 +31,7 @@ git push master master
 wpctl status
 wpctl set-default <Num du Sink>
 ```
-
+# Printer
+- Accéder a l'interface admin de CUPS
+- http://localhost:631/admin
+- Find New Printers, utiliser IPP everywhere. 
