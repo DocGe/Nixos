@@ -61,6 +61,7 @@
 	  "$mod, K, exec, [workspace 1] keepassxc"
           "$mod, Q, killactive"
           "$mod, J, togglesplit"
+          "$mod, V, togglefloating"
           "$mod, up, movefocus, u"
           "$mod, down, movefocus, d"
           "$mod, left, movefocus, l"
@@ -71,7 +72,8 @@
 	  "$mod, C, exec, grimblast save area"
         ];
 	bindm = [
-	  "$mod, mouse:272, movewindow"  
+	  "$mod, mouse:272, movewindow"
+	  "$mod, mouse:273, resizewindow"  
 	];
 	
 

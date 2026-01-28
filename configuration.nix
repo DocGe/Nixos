@@ -98,7 +98,7 @@ in
       ./modules/starship.nix
     ];
     nixpkgs.config.allowUnfree = true;
-    home.stateVersion = "25.05";
+    home.stateVersion = "25.11";
     home.packages = [];
     services.playerctld.enable = true;
   };
@@ -147,7 +147,7 @@ in
     };
   };
  
-  services.logind.lidSwitch = "ignore";
+  services.logind.settings.Login.HandleLidSwitch = "ignore";
   
   
   # Fonts
