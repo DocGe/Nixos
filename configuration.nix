@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 
 let
-  home-manager = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-25.05.tar.gz;
-  catppuccin = builtins.fetchTarball https://github.com/catppuccin/nix/archive/release-25.05.tar.gz;
+  home-manager = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz;
+  catppuccin = builtins.fetchTarball https://github.com/catppuccin/nix/archive/release-25.11.tar.gz;
 in
 {
   imports =
@@ -115,7 +115,7 @@ in
     brightnessctl        # Controle luminosité
     nemo	         # Explorateur
     rose-pine-hyprcursor # Curseur
-    rofi-wayland	 # Rofi
+    rofi         	 # Rofi
     obsidian		 # Obsidian
     dunst		 # Notifications
     haruna		 # Lecteur audio/video
