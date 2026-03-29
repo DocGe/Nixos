@@ -11,6 +11,7 @@ in
       ./modules/printer.nix
       (import "${catppuccin}/modules/nixos")  
     ];
+  #services.logrotate.enable= false;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = false;
@@ -104,8 +105,9 @@ in
   };
   
   programs.hyprland.enable = true;
+  #programs.hyprland.withUWSM = true;
   programs.zsh.enable = true;  
-
+  #programs.zsh.loginShellInit = "if uwsm check may-start; then exec uwsm start hyprland.desktop; fi";
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 

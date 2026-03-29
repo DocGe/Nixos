@@ -3,6 +3,9 @@
 {
   catppuccin = {
     enable = true;
+    anki = {
+      enable = true;
+    };
     #firefox = {
     #  enable = true;
     #  force = true;

@@ -7,6 +7,9 @@
       xwayland.enable = true;
       #systemd.enable = false;
       settings = {
+        debug = {
+	  disable_logs = false;
+	};
         decoration = {
           rounding = 10;
           rounding_power = 2;
@@ -36,7 +39,7 @@
         exec-once = [
         "waybar"
 	"hyprpaper"
-	#"/etc/nixos/modules/wallp.sh"
+	"/etc/nixos/modules/wallp.sh"
         ];
         
         

@@ -14,7 +14,6 @@
       nrs = "sudo nixos-rebuild switch";
       upd = "sudo nix-channel --update";
     };
-    
   };
 
 
